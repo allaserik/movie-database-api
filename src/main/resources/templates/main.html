@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::content})}">
+
+<head>
+    <title>Movie Database Management Home</title>
+</head>
+
+<body>
+    <div th:fragment="content">
+        <h1>Welcome to the Movie Database Management Site</h1>
+        <p>Use the navigation menu to manage actors, genres, and movies.</p>
+    </div>
+</body>
+
+</html>

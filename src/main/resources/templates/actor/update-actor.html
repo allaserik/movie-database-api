@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::content})}">
+
+<head>
+    <title>Update Actor</title>
+</head>
+
+<body>
+    <div th:fragment="content">
+        <h1>Update Actor</h1>
+        <form action="#" th:action="@{/actor/update/{id} (id=${actor.id})}" th:object="${actor}" method="post">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{name}" placeholder="Name" required />
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+
+            <label for="birthDate">Birth Date:</label>
+            <input type="date" id="birthDate" th:field="*{birthDate}" placeholder="Date of Birth" required />
+            <span th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}"></span>
+
+            <button type="submit" value="Update Actor">Update Actor</button>
+        </form>
+        <a th:href="@{/actor/index}">Back to Actor List</a>
+    </div>
+</body>
+
+</html>

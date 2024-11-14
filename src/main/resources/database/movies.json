@@ -1,0 +1,63 @@
+[
+  {
+    "duration": 154,
+    "title": "Pulp Fiction",
+    "releaseYear": 1994,
+    "actors": [
+      {
+        "name": "Samuel L. Jackson",
+        "birthDate": "1948-12-21"
+      },
+      {
+        "name": "John Travolta",
+        "birthDate": "1954-02-18"
+      },
+      {
+        "name": "Uma Thurman",
+        "birthDate": "1970-04-29"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Drama"
+      },
+      {
+        "name": "Crime"
+      },
+      {
+        "name": "Gangster"
+      }
+    ]
+  },
+
+  {
+    "duration": 178,
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "releaseYear": 2001,
+    "actors": [
+      {
+        "name": "Elijah Wood",
+        "birthDate": "1981-01-28"
+      },
+      {
+        "name": "Ian McKellen",
+        "birthDate": "1939-05-25"
+      },
+      {
+        "name": "Orlando Bloom",
+        "birthDate": "1977-01-13"
+      }
+    ],
+    "genres": [
+      {
+        "name": "Fantasy"
+      },
+      {
+        "name": "Adventure"
+      },
+      {
+        "name": "Action"
+      }
+    ]
+  }
+]

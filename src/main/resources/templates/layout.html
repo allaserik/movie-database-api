@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout (title, content)">
+
+<head>
+    <title th:replace="${title}">Movie Database Management</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+
+<body>
+    <header>
+        <h1>Movie Database Management</h1>
+        <nav>
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/actor/index}">Actors</a>
+            <a th:href="@{/genre/index}">Genres</a>
+            <a th:href="@{/movie/index}">Movies</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div th:replace="${content}">
+            <!-- This is where page-specific content will be inserted -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Movie Database</p>
+    </footer>
+</body>
+
+</html>

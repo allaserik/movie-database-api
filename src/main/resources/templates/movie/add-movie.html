@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::content})}">
+
+<head>
+    <title>Add Movie</title>
+</head>
+
+<body>
+    <div th:fragment="content">
+        <h1>Add Movie</h1>
+        <form th:action="@{/movie/addmovie}" th:object="${movie}" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" th:field="*{title}" placeholder="title" required />
+            <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}"></span>
+            <label for="releaseYear">Release Year:</label>
+            <input type="number" id="releaseYear" th:field="*{releaseYear}" placeholder="Release Year" required />
+            <span th:if="${#fields.hasErrors('releaseYear')}" th:errors="*{releaseYear}"></span>
+            <label for="duration">Duration (min):</label>
+            <input type="number" id="duration" th:field="*{duration}" placeholder="duration" required />
+            <span th:if="${#fields.hasErrors('duration')}" th:errors="*{duration}"></span>
+            <button type="submit">Add Movie</button>
+        </form>
+        <a th:href="@{/movie/index}">Back to Movie List</a>
+    </div>
+</body>
+
+</html>

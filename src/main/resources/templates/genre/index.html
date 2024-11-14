@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::content})}">
+
+<head>
+    <title>Genre List</title>
+</head>
+
+<body>
+    <div th:fragment="content">
+        <h1>Genre List</h1>
+        <a th:href="@{/genre/addgenre}">Add Genre</a>
+        <div th:switch="${genres}">
+            <h2 th:case="null">No genres yet!</h2>
+            <div th:case="*">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="genre : ${genres}">
+                            <td th:text="${genre.id}"></td>
+                            <td th:text="${genre.name}"></td>
+                            <td>
+                                <a th:href="@{/genre/edit/{id}(id=${genre.id})}">Edit</a>
+                                <a th:href="@{/genre/delete/{id}(id=${genre.id})}">Delete</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
